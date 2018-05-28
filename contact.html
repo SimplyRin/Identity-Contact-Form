@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>お問い合わせフォーム</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script>
+			function checkForm() {
+				if(document.contact.name.value == "" || document.contact.name.value == "" || document.contact.message.value == "") {
+					alert("必須項目を入力して下さい。");
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<section id="main">
+				<header>
+					<span class="avatar"><img src="images/avatar.jpg" alt="" width="128" height="128" /></span>
+				</header>
+				<h2>お問い合わせフォーム</h2>
+				<form method="post" name="contact" action="post.php">
+					<div class="field">
+						<input type="text" name="name" id="name" placeholder="お名前" />
+					</div>
+					<div class="field">
+						<input type="email" name="email" id="email" placeholder="メールアドレス" />
+					</div>
+					<div class="field">
+						<textarea name="message" id="message" placeholder="内容" rows="4"></textarea>
+					</div>
+					<ul class="actions">
+						<input class="btn btn-primary" name="button" type="submit" onclick="return checkForm();">
+					</ul>
+				</form>
+			</section>
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; SimplyRin</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+		<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
+	</body>
+</html>
